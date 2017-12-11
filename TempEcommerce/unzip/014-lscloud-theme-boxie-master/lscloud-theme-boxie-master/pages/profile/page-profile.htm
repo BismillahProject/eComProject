@@ -1,0 +1,31 @@
+---
+action: 'shop:customerProfile'
+template: inner
+protocol: all
+published: true
+name: Profile
+url: /profile
+---
+<div id="banner" class="jumbotron row">
+	<h1>Profile</h1>
+</div>
+<section class="page-section">
+	{% if customer %}
+	
+	<div class="panel-group checkout-accordions" id="profile-addresses">
+		{{ partial('shop-customerprofile') }}
+
+		<!-- Using hasFeature helper method to check whether card variables should be accessed. -->
+        {% if hasFeature('saved-cards') %}
+            {% set editedCard = '' %}
+            <div id="profile-edit-card">
+                {{ partial('shop-customerprofile-edit-card') }}
+            </div>
+            {{ code_block('script') }}
+        {% endif %}
+	</div>		
+	
+	{% else %}
+	<h4>Please <a href="{{ root_url('login') }}">login</a> to edit your profile.</h4>
+	{% endif %}
+</section>

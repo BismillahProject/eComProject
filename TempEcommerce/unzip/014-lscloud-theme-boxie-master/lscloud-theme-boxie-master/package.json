@@ -1,0 +1,58 @@
+{
+  "name": "Boxie",
+  "version": "1.0.0",
+  "description": "Boxie is a clean and modern theme with a focus on being user friendly and simple for customers. It's colors are customizable, and it includes a handy product quick view feature. It uses a simple 3-step checkout process that won't overwhelm your customers.",
+  "excerpt": "Boxie is a clean, modern theme that is simple and user friendly and includes a product quick-view.",
+  "main": "theme.yaml",
+  "lemonstand" : {
+    "code":"boxie",
+    "type": "theme",
+    "options": "options.json",
+    "demo": "https://boxie.lemonstand.com",
+    "screenshots" : {
+      "small": "https://raw.githubusercontent.com/lemonstand/lscloud-theme-boxie/master/resources/screenshots/tiny-square.png",
+      "large": "https://raw.githubusercontent.com/lemonstand/lscloud-theme-boxie/master/resources/screenshots/large-square.png",
+      "full": "https://raw.githubusercontent.com/lemonstand/lscloud-theme-boxie/master/resources/screenshots/full-size.png"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lemonstand/lscloud-theme-boxie.git"
+  },
+  "author": "LemonStand <support@lemonstand.com> (http://docs.lemonstand.com)",
+  "licenses": [
+    {
+      "type": "Creative Commons Attribution-NoDerivatives 4.0 International",
+      "url": "http://creativecommons.org/licenses/by-nd/4.0/"
+    }
+  ],
+  "homepage": "https://github.com/lemonstand/lscloud-theme-boxie/",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-bower": "0.0.10",
+    "gulp-cache": "^0.2.10",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch-less": "^1.0.1"
+  },
+  "keywords": [
+    "responsive",
+    "electronics",
+    "quick-view",
+    "slider",
+    "3-step-checkout"
+  ]
+}
