@@ -167,7 +167,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,18 +195,12 @@
     <Content Include="Custom\img\logos\envato.jpg" />
     <Content Include="Custom\img\logos\themeforest.jpg" />
     <Content Include="Custom\img\map-image.png" />
-    <Content Include="Custom\img\portfolio\01-full.jpg" />
-    <Content Include="Custom\img\portfolio\01-thumbnail.jpg" />
-    <Content Include="Custom\img\portfolio\02-full.jpg" />
-    <Content Include="Custom\img\portfolio\02-thumbnail.jpg" />
-    <Content Include="Custom\img\portfolio\03-full.jpg" />
-    <Content Include="Custom\img\portfolio\03-thumbnail.jpg" />
-    <Content Include="Custom\img\portfolio\04-full.jpg" />
-    <Content Include="Custom\img\portfolio\04-thumbnail.jpg" />
-    <Content Include="Custom\img\portfolio\05-full.jpg" />
-    <Content Include="Custom\img\portfolio\05-thumbnail.jpg" />
-    <Content Include="Custom\img\portfolio\06-full.jpg" />
-    <Content Include="Custom\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="Custom\img\portfolio\bootshoes-full.jpg" />
+    <Content Include="Custom\img\portfolio\bootshoes-thumbnail.jpg" />
+    <Content Include="Custom\img\portfolio\eprocurement-full.jpg" />
+    <Content Include="Custom\img\portfolio\eprocurement-thumbnail.jpg" />
+    <Content Include="Custom\img\portfolio\Salesforce-full.jpg" />
+    <Content Include="Custom\img\portfolio\Salesforce-thumbnail.jpg" />
     <Content Include="Custom\img\team\Fahrizal.jpg" />
     <Content Include="Custom\img\team\FaniNurliawati.JPG" />
     <Content Include="Custom\img\team\HamkaIrama.jpg" />
@@ -290,14 +289,27 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuNavigation.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Services.cshtml" />
+    <Content Include="Views\Shared\_Portfolio.cshtml" />
+    <Content Include="Views\Shared\_Team.cshtml" />
+    <Content Include="Views\Shared\_About.cshtml" />
+    <Content Include="Views\Shared\_Contact.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Clients.cshtml" />
+    <Content Include="Views\Shared\_Modals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Menu\" />
+    <Folder Include="Views\Portfolio\" />
+    <Folder Include="Views\Services\" />
+    <Folder Include="Views\Team\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
