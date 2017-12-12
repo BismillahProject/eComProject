@@ -15,7 +15,7 @@ namespace CompanyProject.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Testing Your application description page.";
+            ViewBag.Message = "Testing Your application description page. hamka";
 
             return View();
         }
