@@ -1,55 +1,43 @@
-﻿<section class="bg-light" id="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Portfolio</h2>
-                <h3 class="section-subheading text-muted"></h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="~/Custom/img/portfolio/bootshoes-thumbnail.jpg" />
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Bootshoes Application</h4>
-                    <p class="text-muted">Shoes</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="~/Custom/img/portfolio/Salesforce-thumbnail.jpg" />
-                </a>
-                <div class="portfolio-caption">
-                    <h4>CRM Application</h4>
-                    <p class="text-muted">Reporting</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="~/Custom/img/portfolio/eprocurement-thumbnail.jpg" />
-                </a>
-                <div class="portfolio-caption">
-                    <h4>eProcurement</h4>
-                    <p class="text-muted">Procurement</p>
-                </div>
-            </div>
+﻿@using CompanyProjectModel;
+@using CompanyProjectHelper;
 
+@if (ViewBag.DataPortfolio != null)
+{
+    <section class="bg-light" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Portfolio</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (T_PORTFOLIO portfolio in ViewBag.DataPortfolio)
+                {
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="#@portfolio.id">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            @if (portfolio.img != null)
+                            {
+                                <img class="img-fluid" src="data:image/png;base64,@System.Convert.ToBase64String(portfolio.img)" />
+                            }
+                            else
+                            {
+                                <img class="img-fluid" src="data:image/png;base64," />
+                            }
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>@portfolio.portfolio_nm</h4>
+                            <p class="text-muted">@portfolio.portfolio_desc</p>
+                        </div>
+                    </div>
+                }
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+}

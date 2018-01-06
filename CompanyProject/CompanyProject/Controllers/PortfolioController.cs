@@ -1,89 +1,183 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using CompanyProjectModel;
+using CompanyProjectHelper;
 
 namespace MVCProject.Controllers
 {
     public class PortfolioController : Controller
     {
-        // GET: Portfolio
+        private startprojectEntities db = new startprojectEntities();
+
+        [CAuthorize()]
         public ActionResult Index()
         {
-            return View();
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+            List<T_PORTFOLIO> portfolio = db.T_PORTFOLIO.ToList();
+            return PartialView(portfolio);
         }
 
-        // GET: Portfolio/Details/5
-        public ActionResult Details(int id)
+        [CAuthorize()]
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_PORTFOLIO portfolio = db.T_PORTFOLIO.Find(id);
+            if (portfolio == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Details", portfolio);
         }
 
-        // GET: Portfolio/Create
+        [CAuthorize()]
         public ActionResult Create()
         {
-            return View();
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+            return PartialView("Create");
         }
 
-        // POST: Portfolio/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [CAuthorize()]
+        public ActionResult ActionCreate(T_PORTFOLIO portfolio)
         {
+            ResultStatus rs = new ResultStatus();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    portfolio.created_by = CurrentUser.GetCurrentUserId();
+                    portfolio.created_dt = CurrentUser.GetCurrentDateTime();
+                    db.T_PORTFOLIO.Add(portfolio);
+                    db.SaveChanges();
+                    rs.SetSuccessStatus("Data has been created successfully");
+                    TempData["msgSuccess"] = rs.MessageText;
+                }
+                catch (DataException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                    rs.SetErrorStatus("Data failed to created");
+                    TempData["msgError"] = rs.MessageText;
+                }
+            }
+            else
+            {
+                rs.SetErrorStatus("Asteric (*) field is mandatory");
+                TempData["msgError"] = rs.MessageText;
+            }
+
+            return Json(rs);
+        }
+
+        [CAuthorize()]
+        public ActionResult Edit(int? id)
+        {
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_PORTFOLIO portfolio = db.T_PORTFOLIO.Find(id);
+            if (portfolio == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Edit", portfolio);
+        }
+
+        [CAuthorize()]
+        public ActionResult ActionEdit(T_PORTFOLIO portfolio)
+        {
+            ResultStatus rs = new ResultStatus();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    portfolio.last_modified_by = CurrentUser.GetCurrentUserId();
+                    portfolio.last_modified_dt = CurrentUser.GetCurrentDateTime();
+                    db.Entry(portfolio).State = EntityState.Modified;
+                    db.SaveChanges();
+                    rs.SetSuccessStatus("Data has been edited successfully");
+                    TempData["msgSuccess"] = rs.MessageText;
+                }
+                catch (DataException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                    rs.SetErrorStatus("Data failed to edited");
+                    TempData["msgError"] = rs.MessageText;
+                }
+            }
+            else
+            {
+                rs.SetErrorStatus("Asteric (*) field is mandatory");
+                TempData["msgError"] = rs.MessageText;
+            }
+
+            return Json(rs);
+        }
+
+        [CAuthorize()]
+        public ActionResult Delete(int? id)
+        {
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_PORTFOLIO portfolio = db.T_PORTFOLIO.Find(id);
+            if (portfolio == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Delete", portfolio);
+        }
+
+        [CAuthorize()]
+        public ActionResult ActionDelete(int id)
+        {
+            ResultStatus rs = new ResultStatus();
+
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                T_PORTFOLIO portfolio = db.T_PORTFOLIO.Find(id);
+                db.T_PORTFOLIO.Remove(portfolio);
+                db.SaveChanges();
+                rs.SetSuccessStatus("Data has been deleted successfully");
+                TempData["msgSuccess"] = rs.MessageText;
             }
-            catch
+            catch (DataException ex)
             {
-                return View();
+                ModelState.AddModelError("", ex.Message);
+                rs.SetErrorStatus("Data failed to deleted");
+                TempData["msgError"] = rs.MessageText;
             }
+
+            return Json(rs);
         }
 
-        // GET: Portfolio/Edit/5
-        public ActionResult Edit(int id)
+        protected override void Dispose(bool disposing)
         {
-            return View();
-        }
-
-        // POST: Portfolio/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
+            if (disposing)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                db.Dispose();
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Portfolio/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Portfolio/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            base.Dispose(disposing);
         }
     }
 }

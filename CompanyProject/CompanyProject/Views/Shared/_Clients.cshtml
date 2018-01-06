@@ -1,26 +1,28 @@
-﻿<section class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img class="img-fluid d-block mx-auto" src="~/Custom/img/logos/envato.jpg" />
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img class="img-fluid d-block mx-auto" src="~/Custom/img/logos/designmodo.jpg" />
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img class="img-fluid d-block mx-auto" src="~/Custom/img/logos/themeforest.jpg" />
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img class="img-fluid d-block mx-auto" src="~/Custom/img/logos/creative-market.jpg" />
-                </a>
+﻿@using CompanyProjectModel;
+@using CompanyProjectHelper;
+
+@if (ViewBag.DataClient != null)
+{
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                @foreach (T_CLIENT client in ViewBag.DataClient)
+                {
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            @if (client.img != null)
+                            {
+                                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,@System.Convert.ToBase64String(client.img)" />
+                            }
+                            else
+                            {
+                                <img class="img-fluid d-block mx-auto" src="data:image/png;base64," />
+                            }
+                        </a>
+                    </div>
+                }
             </div>
         </div>
-    </div>
-</section>
+    </section>
+}
+

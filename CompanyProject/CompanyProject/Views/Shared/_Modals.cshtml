@@ -1,104 +1,52 @@
-﻿  <!-- Modal 1 -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">BootShoes Application</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="~/Custom/img/portfolio/bootshoes-full.jpg" alt="">
-                            <p>Web application project for Rizky store.</p>
-                            <ul class="list-inline">
-                                <li>Date: October 2016</li>
-                                <li>Client: Rizky Store</li>
-                                <li>Category: Shoes</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fa fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+﻿@using CompanyProjectModel;
+@using CompanyProjectHelper;
 
-<!-- Modal 2 -->
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">CRM Application using Salesforce</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="~/Custom/img/portfolio/Salesforce-full.jpg" alt="">
-                            <p>This application is created for a company in Jakarta. Our team was working with the regional team of the client company </p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Manulife Indonesia</li>
-                                <li>Category: Reporting</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fa fa-times"></i>
-                                Close Project
-                            </button>
+@if (ViewBag.DataPortfolio != null)
+{
+    foreach (T_PORTFOLIO portfolio in ViewBag.DataPortfolio)
+    {
+        <div class="portfolio-modal modal fade" id="@portfolio.id" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here -->
+                                    <h2 class="text-uppercase">@portfolio.portfolio_nm</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    @if (portfolio.img != null)
+                                    {
+                                        <img class="img-fluid d-block mx-auto" src="data:image/png;base64,@System.Convert.ToBase64String(portfolio.img)" />
+                                    }
+                                    else
+                                    {
+                                        <img id="txtImage" class="img-fluid d-block mx-auto" src="data:image/png;base64," style="display:none" />
+                                    }
+                                    <p>@portfolio.portfolio_desc</p>
+                                    <ul class="list-inline">
+                                        <li>Date: @portfolio.portfolio_start.Value.ToString("MM yyyy")</li>
+                                        <li>Client: @portfolio.portfolio_client</li>
+                                        <li>Category: @portfolio.portfolio_category</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fa fa-times"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    }
+}
 
-<!-- Modal 3 -->
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Eprocurement Application</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="~/Custom/img/portfolio/eprocurement-full.jpg" alt="">
-                            <p>This application is created for a company in Jakarta. Using vb.net 2016 MVC</p>
-                            <ul class="list-inline">
-                                <li>Date: Aprial 2017</li>
-                                <li>Client: eProcurement division in Manulife indonesia</li>
-                                <li>Category: Procurement</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fa fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+ 

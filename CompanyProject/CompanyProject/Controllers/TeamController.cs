@@ -1,89 +1,183 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using CompanyProjectModel;
+using CompanyProjectHelper;
 
 namespace MVCProject.Controllers
 {
     public class TeamController : Controller
     {
-        // GET: Team
+        private startprojectEntities db = new startprojectEntities();
+
+        [CAuthorize()]
         public ActionResult Index()
         {
-            return View();
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+            List<T_TEAM> team = db.T_TEAM.ToList();
+            return PartialView(team);
         }
 
-        // GET: Team/Details/5
-        public ActionResult Details(int id)
+        [CAuthorize()]
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_TEAM team = db.T_TEAM.Find(id);
+            if (team == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Details", team);
         }
 
-        // GET: Team/Create
+        [CAuthorize()]
         public ActionResult Create()
         {
-            return View();
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+            return PartialView("Create");
         }
 
-        // POST: Team/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [CAuthorize()]
+        public ActionResult ActionCreate(T_TEAM team)
         {
+            ResultStatus rs = new ResultStatus();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    team.created_by = CurrentUser.GetCurrentUserId();
+                    team.created_dt = CurrentUser.GetCurrentDateTime();
+                    db.T_TEAM.Add(team);
+                    db.SaveChanges();
+                    rs.SetSuccessStatus("Data has been created successfully");
+                    TempData["msgSuccess"] = rs.MessageText;
+                }
+                catch (DataException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                    rs.SetErrorStatus("Data failed to created");
+                    TempData["msgError"] = rs.MessageText;
+                }
+            }
+            else
+            {
+                rs.SetErrorStatus("Asteric (*) field is mandatory");
+                TempData["msgError"] = rs.MessageText;
+            }
+
+            return Json(rs);
+        }
+
+        [CAuthorize()]
+        public ActionResult Edit(int? id)
+        {
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_TEAM team = db.T_TEAM.Find(id);
+            if (team == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Edit", team);
+        }
+
+        [CAuthorize()]
+        public ActionResult ActionEdit(T_TEAM team)
+        {
+            ResultStatus rs = new ResultStatus();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    team.last_modified_by = CurrentUser.GetCurrentUserId();
+                    team.last_modified_dt = CurrentUser.GetCurrentDateTime();
+                    db.Entry(team).State = EntityState.Modified;
+                    db.SaveChanges();
+                    rs.SetSuccessStatus("Data has been edited successfully");
+                    TempData["msgSuccess"] = rs.MessageText;
+                }
+                catch (DataException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                    rs.SetErrorStatus("Data failed to edited");
+                    TempData["msgError"] = rs.MessageText;
+                }
+            }
+            else
+            {
+                rs.SetErrorStatus("Asteric (*) field is mandatory");
+                TempData["msgError"] = rs.MessageText;
+            }
+
+            return Json(rs);
+        }
+
+        [CAuthorize()]
+        public ActionResult Delete(int? id)
+        {
+            ViewBag.msgSuccess = TempData["msgSuccess"];
+            ViewBag.msgError = TempData["msgError"];
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            T_TEAM team = db.T_TEAM.Find(id);
+            if (team == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView("Delete", team);
+        }
+
+        [CAuthorize()]
+        public ActionResult ActionDelete(int id)
+        {
+            ResultStatus rs = new ResultStatus();
+            
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                T_TEAM team = db.T_TEAM.Find(id);
+                db.T_TEAM.Remove(team);
+                db.SaveChanges();
+                rs.SetSuccessStatus("Data has been deleted successfully");
+                TempData["msgSuccess"] = rs.MessageText;
             }
-            catch
+            catch (DataException ex)
             {
-                return View();
+                ModelState.AddModelError("", ex.Message);
+                rs.SetErrorStatus("Data failed to deleted");
+                TempData["msgError"] = rs.MessageText;
             }
+            
+            return Json(rs);
         }
 
-        // GET: Team/Edit/5
-        public ActionResult Edit(int id)
+        protected override void Dispose(bool disposing)
         {
-            return View();
-        }
-
-        // POST: Team/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
+            if (disposing)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                db.Dispose();
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Team/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Team/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            base.Dispose(disposing);
         }
     }
 }

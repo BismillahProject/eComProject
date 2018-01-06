@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <title>Start Project</title>
+    @Styles.Render("~/bundles/custom/css")
+
+</head>z
+
+<body id="page-top">
+    <!-- Navigation -->
+    @Html.Partial("_MenuNavigation")
+
+    <!-- Header -->
+    @Html.Partial("_Header")
+
+    <!-- Services -->
+    @Html.Partial("_Services")
+
+    <!-- Portfolio Grid -->
+    @Html.Partial("_Portfolio")
+
+    <!-- About -->
+    @Html.Partial("_About")
+
+    <!-- Team -->
+    @Html.Partial("_Team")
+
+    <!-- Clients -->
+    @Html.Partial("_Clients")
+
+    <!-- Contact -->
+    @Html.Partial("_Contact")
+
+    <!-- Footer -->
+    @Html.Partial("_Footer")
+
+    <!-- Portfolio Modals -->
+    @Html.Partial("_Modals")
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/custom/js")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
