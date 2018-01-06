@@ -12,6 +12,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 08:43:40</publishTime>
     </File>
+    <File Include="bin/CompanyProjectHelper.dll">
+      <publishTime>01/03/2018 00:07:03</publishTime>
+    </File>
+    <File Include="bin/CompanyProjectModel.dll">
+      <publishTime>01/03/2018 00:07:03</publishTime>
+    </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
     </File>
@@ -88,7 +94,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2012 15:23:58</publishTime>
     </File>
     <File Include="bin/MVCProject.dll">
-      <publishTime>12/27/2017 13:44:49</publishTime>
+      <publishTime>01/03/2018 00:07:07</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2014 20:33:56</publishTime>
@@ -222,14 +228,539 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>12/08/2017 10:11:13</publishTime>
     </File>
+    <File Include="Content/jquery-ui.css">
+      <publishTime>12/28/2017 00:14:42</publishTime>
+    </File>
     <File Include="Content/Site.css">
       <publishTime>12/08/2017 10:10:42</publishTime>
+    </File>
+    <File Include="Custom/css/ace.css">
+      <publishTime>12/29/2017 18:03:10</publishTime>
     </File>
     <File Include="Custom/css/agency.css">
       <publishTime>12/11/2017 19:46:13</publishTime>
     </File>
     <File Include="Custom/css/agency.min.css">
       <publishTime>12/11/2017 19:46:13</publishTime>
+    </File>
+    <File Include="Custom/css/bootstrap.css">
+      <publishTime>12/29/2017 19:46:31</publishTime>
+    </File>
+    <File Include="Custom/css/datepicker.css">
+      <publishTime>12/29/2017 13:38:47</publishTime>
+    </File>
+    <File Include="Custom/css/less/ace-features.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/ace-nav.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/ace-responsive.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/ace-rtl.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/ace.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/basic.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/alerts.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/badges.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/bootstrap.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/breadcrumbs.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/button-groups.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/buttons.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/carousel.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/close.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/code.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/component-animations.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/dropdowns.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/forms.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/glyphicons.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/grid.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/input-groups.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/jumbotron.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/labels.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/list-group.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/media.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/alerts.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/background-variant.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/border-radius.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/buttons.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/center-block.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/clearfix.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/forms.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/gradients.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/grid-framework.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/grid.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/hide-text.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/image.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/labels.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/list-group.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/nav-divider.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/nav-vertical-align.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/opacity.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/pagination.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/panels.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/progress-bar.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/reset-filter.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/resize.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/responsive-visibility.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/size.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/tab-focus.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/table-row.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/text-emphasis.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/text-overflow.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/mixins/vendor-prefixes.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/modals.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/navbar.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/navs.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/normalize.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/pager.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/pagination.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/panels.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/popovers.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/print.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/progress-bars.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/responsive-embed.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/responsive-utilities.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/scaffolding.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/tables.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/theme.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/thumbnails.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/tooltip.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/type.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/utilities.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/variables.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bootstrap/wells.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/breadcrumbs.less">
+      <publishTime>12/29/2017 21:13:59</publishTime>
+    </File>
+    <File Include="Custom/css/less/bs3-reset.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/buttons.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/dropdown.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/dropdown/colorpicker.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/dropdown/navbar-dropdown.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/dropdown/navbar-tabbed-dropdown.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/ext/bootstrap-tag.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/fonts-rel.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/fonts.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/footer.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/form.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/form/checkbox.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/form/file.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/gallery.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/general.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/icon-animated.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/infobox.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/items.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/label-badge.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/mixins.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/modal.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/collapsible.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/navbar-menu-form.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/toggle-button.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/user-buttons-move-down.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/user-buttons.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/user-dropdown-position.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/navbar/user-menu.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/onpage-help.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/other.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.error.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.inbox.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.invoice.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.login.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.pricing.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.profile.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/page.timeline.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/print.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/progressbar.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/scroll.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/searchbox.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/active.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/compact.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/ff_fix.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/highlight.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/horizontal.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/hover.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/min.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/multiple.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/old-toggle-button.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/responsive-1.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/responsive-2.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/responsive-3.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/shortcuts-toggle.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/sidebar-fixed.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/sidebar/sub-arrow.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/empty.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/no-skin.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/skin-1.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/skin-2.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/skin-3.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/skins/skins.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/tab-accordion.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/tables.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-calendar.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-chosen.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-colorbox.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-dataTables.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-date.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-dropzone.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-duallist-multiselect.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-editable.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-fuelux.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-gritter.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-jqgrid.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-jquery-ui.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-nestable.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-raty.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-select2.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-slider.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-typeahead.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/thirdparty-wysiwyg.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/tooltip-popover.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/utility.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/variables.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/less/widget.less">
+      <publishTime>12/29/2017 21:14:00</publishTime>
+    </File>
+    <File Include="Custom/css/setup.css">
+      <publishTime>12/27/2017 17:32:15</publishTime>
+    </File>
+    <File Include="Custom/dataTables/extensions/ColVis/js/dataTables.colVis.js">
+      <publishTime>12/29/2017 18:31:01</publishTime>
+    </File>
+    <File Include="Custom/dataTables/extensions/TableTools/js/dataTables.tableTools.js">
+      <publishTime>12/29/2017 18:31:01</publishTime>
+    </File>
+    <File Include="Custom/dataTables/extensions/TableTools/swf/copy_csv_xls.swf">
+      <publishTime>12/29/2017 18:31:01</publishTime>
+    </File>
+    <File Include="Custom/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf">
+      <publishTime>12/29/2017 18:31:01</publishTime>
+    </File>
+    <File Include="Custom/dataTables/jquery.dataTables.bootstrap.js">
+      <publishTime>12/29/2017 18:31:01</publishTime>
+    </File>
+    <File Include="Custom/dataTables/jquery.dataTables.js">
+      <publishTime>12/29/2017 18:31:01</publishTime>
     </File>
     <File Include="Custom/img/about/eprocurement.jpg">
       <publishTime>12/12/2017 10:57:14</publishTime>
@@ -239,6 +770,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Custom/img/header-bg.jpg">
       <publishTime>12/11/2017 19:48:36</publishTime>
+    </File>
+    <File Include="Custom/img/loading.gif">
+      <publishTime>12/28/2017 10:05:40</publishTime>
     </File>
     <File Include="Custom/img/logos/creative-market.jpg">
       <publishTime>12/11/2017 19:48:36</publishTime>
@@ -273,6 +807,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Custom/img/portfolio/Salesforce-thumbnail.jpg">
       <publishTime>12/12/2017 17:07:02</publishTime>
     </File>
+    <File Include="Custom/img/team/ArifmanZulfa.JPG">
+      <publishTime>01/02/2018 15:33:52</publishTime>
+    </File>
     <File Include="Custom/img/team/Fahrizal.jpg">
       <publishTime>12/12/2017 17:31:00</publishTime>
     </File>
@@ -282,20 +819,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Custom/img/team/HamkaIrama.jpg">
       <publishTime>09/14/2017 10:43:38</publishTime>
     </File>
+    <File Include="Custom/img/team/RidwanMegaToni.jpg">
+      <publishTime>01/02/2018 12:53:18</publishTime>
+    </File>
     <File Include="Custom/img/team/WowoAribowo.jpg">
       <publishTime>12/12/2017 14:47:16</publishTime>
     </File>
     <File Include="Custom/js/agency.js">
-      <publishTime>12/11/2017 19:43:15</publishTime>
+      <publishTime>12/28/2017 12:57:05</publishTime>
     </File>
     <File Include="Custom/js/agency.min.js">
       <publishTime>12/11/2017 19:43:15</publishTime>
+    </File>
+    <File Include="Custom/js/bootstrap-datepicker.js">
+      <publishTime>12/29/2017 11:37:07</publishTime>
     </File>
     <File Include="Custom/js/contact_me.js">
       <publishTime>12/11/2017 19:43:15</publishTime>
     </File>
     <File Include="Custom/js/jqBootstrapValidation.js">
       <publishTime>12/11/2017 19:43:15</publishTime>
+    </File>
+    <File Include="Custom/js/jquery-ui.js">
+      <publishTime>12/27/2017 23:49:52</publishTime>
     </File>
     <File Include="Custom/vendor/bootstrap/css/bootstrap-grid.css">
       <publishTime>12/11/2017 19:43:10</publishTime>
@@ -477,6 +1023,39 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>12/08/2017 10:11:12</publishTime>
     </File>
+    <File Include="Scripts/Controller/AboutController.js">
+      <publishTime>01/02/2018 10:38:28</publishTime>
+    </File>
+    <File Include="Scripts/Controller/ClientController.js">
+      <publishTime>01/02/2018 15:15:58</publishTime>
+    </File>
+    <File Include="Scripts/Controller/ContactController.js">
+      <publishTime>01/02/2018 22:16:36</publishTime>
+    </File>
+    <File Include="Scripts/Controller/LoginController.js">
+      <publishTime>12/30/2017 19:33:43</publishTime>
+    </File>
+    <File Include="Scripts/Controller/PortfolioController.js">
+      <publishTime>01/02/2018 11:46:05</publishTime>
+    </File>
+    <File Include="Scripts/Controller/ServiceController.js">
+      <publishTime>01/02/2018 10:38:49</publishTime>
+    </File>
+    <File Include="Scripts/Controller/TeamController.js">
+      <publishTime>12/30/2017 17:31:30</publishTime>
+    </File>
+    <File Include="Scripts/Helpers/Common.js">
+      <publishTime>01/02/2018 17:50:49</publishTime>
+    </File>
+    <File Include="Scripts/Helpers/Modal.js">
+      <publishTime>12/28/2017 02:07:26</publishTime>
+    </File>
+    <File Include="Scripts/Helpers/ResultStatus.js">
+      <publishTime>12/29/2017 15:44:27</publishTime>
+    </File>
+    <File Include="Scripts/Helpers/StandardTable.js">
+      <publishTime>12/30/2017 11:42:13</publishTime>
+    </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>12/08/2017 10:11:15</publishTime>
     </File>
@@ -508,10 +1087,76 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2017 10:11:32</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/12/2017 09:55:04</publishTime>
+      <publishTime>01/02/2018 16:49:11</publishTime>
+    </File>
+    <File Include="Views/About/Create.cshtml">
+      <publishTime>01/02/2018 10:32:09</publishTime>
+    </File>
+    <File Include="Views/About/Delete.cshtml">
+      <publishTime>01/02/2018 10:26:15</publishTime>
+    </File>
+    <File Include="Views/About/Details.cshtml">
+      <publishTime>01/02/2018 09:12:58</publishTime>
+    </File>
+    <File Include="Views/About/Edit.cshtml">
+      <publishTime>01/02/2018 10:32:21</publishTime>
+    </File>
+    <File Include="Views/About/Index.cshtml">
+      <publishTime>01/02/2018 10:23:21</publishTime>
+    </File>
+    <File Include="Views/Client/Create.cshtml">
+      <publishTime>01/02/2018 15:13:16</publishTime>
+    </File>
+    <File Include="Views/Client/Delete.cshtml">
+      <publishTime>01/02/2018 14:28:55</publishTime>
+    </File>
+    <File Include="Views/Client/Details.cshtml">
+      <publishTime>01/02/2018 14:32:50</publishTime>
+    </File>
+    <File Include="Views/Client/Edit.cshtml">
+      <publishTime>01/02/2018 14:54:24</publishTime>
+    </File>
+    <File Include="Views/Client/Index.cshtml">
+      <publishTime>01/02/2018 15:09:45</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>12/12/2017 16:46:17</publishTime>
+    </File>
+    <File Include="Views/Home/IndexAce.cshtml">
+      <publishTime>12/30/2017 10:53:01</publishTime>
+    </File>
+    <File Include="Views/Home/TableAce.cshtml">
+      <publishTime>12/30/2017 12:55:18</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Create.cshtml">
+      <publishTime>01/02/2018 11:44:48</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Delete.cshtml">
+      <publishTime>01/02/2018 11:44:04</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Details.cshtml">
+      <publishTime>01/02/2018 11:43:44</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Edit.cshtml">
+      <publishTime>01/02/2018 11:42:55</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Index.cshtml">
+      <publishTime>01/02/2018 11:41:51</publishTime>
+    </File>
+    <File Include="Views/Service/Create.cshtml">
+      <publishTime>01/02/2018 10:53:28</publishTime>
+    </File>
+    <File Include="Views/Service/Delete.cshtml">
+      <publishTime>12/30/2017 20:01:55</publishTime>
+    </File>
+    <File Include="Views/Service/Details.cshtml">
+      <publishTime>12/30/2017 20:01:44</publishTime>
+    </File>
+    <File Include="Views/Service/Edit.cshtml">
+      <publishTime>01/02/2018 10:24:53</publishTime>
+    </File>
+    <File Include="Views/Service/Index.cshtml">
+      <publishTime>12/30/2017 20:09:02</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>12/08/2017 10:11:36</publishTime>
@@ -520,40 +1165,55 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2017 10:11:37</publishTime>
     </File>
     <File Include="Views/Shared/_About.cshtml">
-      <publishTime>12/12/2017 16:39:25</publishTime>
+      <publishTime>01/02/2018 11:56:51</publishTime>
     </File>
     <File Include="Views/Shared/_Clients.cshtml">
-      <publishTime>12/12/2017 16:40:41</publishTime>
+      <publishTime>01/02/2018 15:03:57</publishTime>
     </File>
     <File Include="Views/Shared/_Contact.cshtml">
-      <publishTime>12/12/2017 16:40:49</publishTime>
+      <publishTime>01/02/2018 19:27:03</publishTime>
     </File>
     <File Include="Views/Shared/_Footer.cshtml">
       <publishTime>12/12/2017 16:40:59</publishTime>
     </File>
     <File Include="Views/Shared/_Header.cshtml">
-      <publishTime>12/12/2017 16:38:51</publishTime>
+      <publishTime>12/28/2017 15:15:37</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/14/2017 23:31:08</publishTime>
+      <publishTime>01/02/2018 16:53:21</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>12/08/2017 10:11:37</publishTime>
     </File>
     <File Include="Views/Shared/_MenuNavigation.cshtml">
-      <publishTime>12/12/2017 16:38:23</publishTime>
+      <publishTime>01/02/2018 14:56:42</publishTime>
     </File>
     <File Include="Views/Shared/_Modals.cshtml">
-      <publishTime>12/12/2017 17:28:59</publishTime>
+      <publishTime>01/02/2018 11:55:55</publishTime>
     </File>
     <File Include="Views/Shared/_Portfolio.cshtml">
-      <publishTime>12/12/2017 17:29:28</publishTime>
+      <publishTime>01/02/2018 11:22:11</publishTime>
     </File>
     <File Include="Views/Shared/_Services.cshtml">
-      <publishTime>12/12/2017 16:39:05</publishTime>
+      <publishTime>01/02/2018 10:52:06</publishTime>
     </File>
     <File Include="Views/Shared/_Team.cshtml">
-      <publishTime>12/12/2017 16:39:35</publishTime>
+      <publishTime>01/02/2018 10:42:59</publishTime>
+    </File>
+    <File Include="Views/Team/Create.cshtml">
+      <publishTime>01/02/2018 10:25:16</publishTime>
+    </File>
+    <File Include="Views/Team/Delete.cshtml">
+      <publishTime>12/30/2017 20:26:06</publishTime>
+    </File>
+    <File Include="Views/Team/Details.cshtml">
+      <publishTime>12/30/2017 20:25:04</publishTime>
+    </File>
+    <File Include="Views/Team/Edit.cshtml">
+      <publishTime>01/02/2018 10:25:22</publishTime>
+    </File>
+    <File Include="Views/Team/Index.cshtml">
+      <publishTime>12/30/2017 18:47:34</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>12/12/2017 14:25:28</publishTime>
@@ -562,7 +1222,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2017 10:10:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/27/2017 13:44:49</publishTime>
+      <publishTime>01/03/2018 00:07:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

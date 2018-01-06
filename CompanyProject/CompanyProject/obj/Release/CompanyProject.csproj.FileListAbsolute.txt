@@ -103,3 +103,7 @@ D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\Microsoft.AI.Windo
 D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\Microsoft.ApplicationInsights.xml
 D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\CompanyProjectHelper.dll
+D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\CompanyProjectModel.dll
+D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\CompanyProjectHelper.pdb
+D:\Hamka\GitHub\eComProject\CompanyProject\CompanyProject\bin\CompanyProjectModel.pdb
